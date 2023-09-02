@@ -2,11 +2,17 @@
 
 import React from 'react'
 import Image from 'next/image'
+
 import CustomButton from './CustomButton'
 
 const Hero = () => {
-    const handleScroll = () => {
+    const handleScroll = () => { 
+        const discover = document.getElementById('discover')
 
+        window.scrollTo({
+            top: discover?.getBoundingClientRect().top,
+            behavior: 'smooth'
+        })
     }
 
   return (
